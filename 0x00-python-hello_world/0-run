@@ -1,9 +1,8 @@
 #!/bin/bash
 # This is a Shell script that runs a Python script
-
 # Check if the PYFILE variable is set and if the file exists
 if [[ -n "$PYFILE" && -f "$PYFILE" ]]; then
-    python3 "$PYFILE"
+python3 "$PYFILE"
 else
-    echo "The PYFILE variable is not set or the file does not exist."
+echo "The PYFILE variable is not set or the file does not exist."
 fi
