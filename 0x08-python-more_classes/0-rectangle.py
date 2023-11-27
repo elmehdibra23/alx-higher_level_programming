@@ -3,7 +3,7 @@
 Defines a Rectangle class.
 """
 class Rectangle:
-    """
-    Empty Rectangle class.
-    """
-    pass
+"""
+Empty Rectangle class.
+"""
+pass
