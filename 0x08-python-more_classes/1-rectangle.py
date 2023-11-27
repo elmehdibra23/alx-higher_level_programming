@@ -1,65 +1,67 @@
 #!/usr/bin/python3
-"""
-1-rectangle, built for Holberton Python project 0x08 task 1.
+"""1-rectangle, créé pour le projet Holberton Python 0x08 tâche 1.
 """
 
 
 class Rectangle:
-    """
-    Rectangle class with private instance attributes for width and height.
-    """
+    """À ce stade, la classe crée uniquement des attributs d'instance privés
+    en prenant deux arguments.
 
+    Args:
+        width (int): dimension horizontale du rectangle, par défaut à 0
+        height (int): dimension verticale du rectangle, par défaut à 0
+
+    """
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle instance.
-
-        Args:
-            width (int): Horizontal dimension, defaults to 0.
-            height (int): Vertical dimension, defaults to 0.
-        """
+        # l'assignation d'attributs ici engage les setters définis ci-dessous
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getter for the horizontal dimension of the rectangle."""
+        """Getter pour la dimension horizontale du rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter for the horizontal dimension of the rectangle.
+        """Args:
+            value (int): dimension horizontale du rectangle
 
-        Args:
-            value (int): Horizontal dimension.
+        Attributes:
+            __width (int): dimension horizontale du rectangle
 
         Raises:
-            TypeError: If `value` is not an int.
-            ValueError: If `value` is less than 0.
+            TypeError: Si `value` n'est pas un entier.
+            ValueError: Si `value` est inférieur à 0.
+
         """
-        if not isinstance(value, int):
-            raise TypeError('Width must be an integer')
-        if value < 0:
-            raise ValueError('Width must be >= 0')
+        if type(value) is not int:
+            raise TypeError('width doit être un entier')
+        elif value < 0:
+            raise ValueError('width doit être >= 0')
         self.__width = value
 
     @property
     def height(self):
-        """Getter for the vertical dimension of the rectangle."""
+        """Getter pour la dimension verticale du rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter for the vertical dimension of the rectangle.
+        """Args:
+            value (int): dimension verticale du rectangle
 
-        Args:
-            value (int): Vertical dimension.
+        Attributes:
+            __height (int): dimension verticale du rectangle
 
         Raises:
-            TypeError: If `value` is not an int.
-            ValueError: If `value` is less than 0.
+            TypeError: Si `value` n'est pas un entier.
+            ValueError: Si `value` est inférieur à 0.
+
         """
-        if not isinstance(value, int):
-            raise TypeError('Height must be an integer')
+        if type(value) is not int:
+            raise TypeError('height doit être un entier')
         if value < 0:
-            raise ValueError('Height must be >= 0')
+            raise ValueError('height doit être >= 0')
         self.__height = value
 
